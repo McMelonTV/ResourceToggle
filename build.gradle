@@ -1,0 +1,62 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "$loom_version"
+    id 'java'
+}
+
+version = rootProject.mod_version
+group = rootProject.maven_group
+
+base {
+    archivesName = rootProject.archives_base_name
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${rootProject.loader_version}"
+}
+
+// NeoForge compile stubs (see src/stubs) — compile-only, never packaged.
+sourceSets {
+    stubs {
+        java.srcDir 'src/stubs/java'
+    }
+}
+dependencies {
+    compileOnly sourceSets.stubs.output
+}
+
+processResources {
+    def version = project.version
+    inputs.property 'version', version
+
+    filesMatching('fabric.mod.json') {
+        expand 'version': version
+    }
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand 'version': version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 25
+    it.options.encoding = 'UTF-8'
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
+
+jar {
+    def projectName = project.name
+    inputs.property 'projectName', projectName
+
+    from('LICENSE') {
+        rename { "${it}_${projectName}" }
+    }
+}

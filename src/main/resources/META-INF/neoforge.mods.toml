@@ -1,0 +1,21 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "MIT"
+
+[[mods]]
+modId = "resourcetoggle"
+version = "${version}"
+displayName = "ResourceToggle"
+description = '''Adds a button and hotkey to instantly toggle all non-vanilla resource packs in-game, without the server noticing.'''
+authors = ["McMelonTV"]
+license = "MIT"
+
+[[mixins]]
+config = "resourcetoggle.mixins.json"
+
+[[dependencies.resourcetoggle]]
+modId = "minecraft"
+type = "required"
+versionRange = "[26.2,26.3)"
+ordering = "NONE"
+side = "CLIENT"

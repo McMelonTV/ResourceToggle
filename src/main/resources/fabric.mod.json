@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "resourcetoggle",
+  "version": "${version}",
+  "name": "ResourceToggle",
+  "description": "Adds a button and hotkey to instantly toggle all non-vanilla resource packs in-game, without the server noticing.",
+  "authors": [
+    "McMelonTV"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "ing.boykiss.resourcetoggle.fabric.ResourceToggleFabricClient"
+    ]
+  },
+  "mixins": [
+    "resourcetoggle.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25"
+  }
+}

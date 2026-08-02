@@ -1,0 +1,7 @@
+{
+  "key.resourcetoggle.toggle": "Toggle Resource Packs",
+  "resourcetoggle.button.all": "Packs: All",
+  "resourcetoggle.button.vanilla": "Packs: Vanilla",
+  "resourcetoggle.toast.all": "All resource packs restored",
+  "resourcetoggle.toast.vanilla": "Vanilla resources only"
+}

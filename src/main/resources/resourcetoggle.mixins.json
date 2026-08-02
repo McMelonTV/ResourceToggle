@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "ing.boykiss.resourcetoggle.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "minVersion": "0.8",
+  "client": [
+    "MinecraftReloadMixin",
+    "MinecraftTickMixin",
+    "OptionsAccessor",
+    "OptionsMixin",
+    "ScreenButtonMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
