@@ -26,15 +26,6 @@ public final class ResourceToggle {
     }
 
     /**
-     * Called from the {@code Minecraft.tick} mixin.
-     */
-    public static void onClientTick() {
-        while (TOGGLE_KEY.consumeClick()) {
-            ToggleController.INSTANCE.toggle();
-        }
-    }
-
-    /**
      * Adds the toggle button to a screen (title / pause).
      */
     public static void addToggleButton(Screen screen, java.util.function.Consumer<Button> adder) {
