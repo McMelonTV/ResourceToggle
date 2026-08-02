@@ -1,3 +1,7 @@
+[![Modrinth Downloads](https://img.shields.io/modrinth/dt/resourcetoggle?style=for-the-badge&logo=modrinth&color=1bd96a)](https://modrinth.com/mod/resourcetoggle/)
+[![CurseForge Downloads](https://img.shields.io/curseforge/dt/1636400?style=for-the-badge&logo=curseforge&color=f16436)](https://www.curseforge.com/minecraft/mc-mods/resourcetogglemod)
+[![GitHub Downloads](https://img.shields.io/github/downloads/McMelonTV/ResourceToggle/total?style=for-the-badge&logo=github&color=f0f6fc)](https://github.com/McMelonTV/ResourceToggle/releases)
+
 # ResourceToggle
 
 A client-side Minecraft 26.2 mod that lets you instantly toggle all non-vanilla resource packs in-game for testing/debugging.
