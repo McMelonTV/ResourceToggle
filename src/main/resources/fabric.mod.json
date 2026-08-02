@@ -4,6 +4,7 @@
   "version": "${version}",
   "name": "ResourceToggle",
   "description": "Adds a button and hotkey to instantly toggle all non-vanilla resource packs in-game, without the server noticing.",
+  "icon": "assets/resourcetoggle/icon.png",
   "authors": [
     "McMelonTV"
   ],
